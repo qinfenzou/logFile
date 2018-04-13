@@ -1,0 +1,11 @@
+.qq .pp{。。。。。}中间有空格表示 选择class中包含qq的元素内子元素中class中包含pp的元素
+
+.qq.pp{。。。。。}中间没有空格表示 选择class中同时包含qq和pp的元素
+如会选择
+<div class="qq pp"></div>
+<div class="pp qq"></div>
+<div class="qq aa pp"></div>
+不会选择
+<div class="qq"></div>
+<div class="pp"></div>
+<div class="qq aa"></div>

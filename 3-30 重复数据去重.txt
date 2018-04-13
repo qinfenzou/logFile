@@ -1,0 +1,6 @@
+
+
+众所周知，distinct可以列出不重复的记录，对于单个字段来说distinct使用比较简单，但是对于多个字段来说，distinct使用起来会使人发狂。而且貌似也没有见到微软对distinct使用多字段的任何说明。下面就提供了一种方法可以在使用distinct的时候同时使用多个字段。
+select 要使用字段1,要使用字段2 from 表名 where id in (select min(id) from 表名 group by 不重复字段名)
+例：
+  select byid,id from bbs where id in (select min(id) from bbs group by byid)

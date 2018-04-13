@@ -1,0 +1,15 @@
+https://www.cnblogs.com/ajianbeyourself/p/5815689.html [荐]
+
+https://www.jianshu.com/p/518d424d4994[简单版]
+
+(function($){ 
+    $.fn.changeStyle = function(option){ 
+         var defaultSetting = { colorStr:"green",fontSize:12}; 
+         var setting = $.extend(defaultSetting,option); 
+         this.css("color",setting.colorStr)
+             .css("fontSize",setting.fontSize+"px");
+
+        return this; //链式调用体系的保留
+                                       }
+            }(jQuery));
+

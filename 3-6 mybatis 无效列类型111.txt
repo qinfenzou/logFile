@@ -1,0 +1,9 @@
+如果对一个属性字段，需要传递ｎｕｌｌ值，（尤其是Ｄａｔｅ，ｉｎｔ等类型时），ＪＤＢＣＴｙｐｅ是必要的。（我觉得为了不出错，每个字段都写也是可以的）
+
+
+【例】
+
+ 传递值[csrq]为null时，必须要将jdbcType加上
+update base.sys_person t
+                 set t.rybh=#{rybh},t.xm=#{xm},t.ryzt=#{ryzt},t.sfzhm=#{sfzhm},t.xb=#{xb},t.sj=#{sj},t.yx=#{yx},t.jtzz=#{jtzz},t.bz=#{bz},t.csrq=#{csrq,jdbcType=TIMESTAMP}
+             where t.ryid=#{ryid}

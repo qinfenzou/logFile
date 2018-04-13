@@ -1,0 +1,25 @@
+easyUI datagrid 列的显示与隐藏:
+
+columns:[[    
+                {field:'id',checkbox:true}, 
+                {field:'data',title:'数据',width:150，hidden:'true'}, 
+            ]],
+            onLoadSuccess:function(d){
+                console.log(d);
+            }
+
+
+js动态控制；
+在datagrid中，我们常常根据条件想展示或者隐藏某一列，即动态展示某列
+
+1.在EasyUI中：
+
+ 1）展示某列的方法：     $('#tt').datagrid('showColumn', 'XXX');  -----其中 XXX 是隐藏列的  field 属性值
+
+ 2）隐藏某列的方法：     $('#tt').datagrid('hideColumn', 'XXX');  -----其中 XXX 是隐藏列的  field 属性值
+
+2.在miniUI中：
+
+  1）展示某列的方法：     mini.get("datagrid1").showColumn (XX）; ----------其中代表的是第 XX 列的值，假如想展示第二列（假如第二列之前是隐藏的），则 XX 就为 2
+
+  2）隐藏某列的方法：     mini.get("datagrid1").hideColumn ( XX）; ----------其中代表的是第 XX 列的值，假如想隐藏第二列（假如第二列之前是展示的），则 XX 就为 2

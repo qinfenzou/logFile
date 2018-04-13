@@ -1,0 +1,9 @@
+涉及到的表：
+
+   B_RS_RY 人员表
+
+   B_RS_JS 角色表
+
+   B_RS_DXJSGX 对象角色表
+
+   B_RS_JSZYGX 角色资源表

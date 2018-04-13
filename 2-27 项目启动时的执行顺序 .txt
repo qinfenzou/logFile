@@ -1,0 +1,5 @@
+https://www.cnblogs.com/Anidot/articles/7141734.html  【项目启动时的执行顺序】
+
+http://blog.csdn.net/cb2474600377/article/details/44592617  【javaweb listener的配置】
+
+

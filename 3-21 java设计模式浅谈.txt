@@ -1,0 +1,5 @@
+http://blog.csdn.net/column/details/java-d-model.html【大体目录】
+
+
+
+http://blog.csdn.net/caihongdao123/article/details/51862158【各种设计模式的关系】

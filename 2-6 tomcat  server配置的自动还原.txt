@@ -1,0 +1,13 @@
+问题：
+ 
+  在tomcat安装目录下，修改server.xml或是content.xml文件后，第一次使用Eclipse启动执行tomcat，就能够按照已修改后的server.xml执行，但是再次启动时，就会导致修改文件被还原的问题？
+
+造成的原因：
+
+  Eclipse中会自己维护server.xml和content.xml文件，在以Eclipse启动tomcat将会导致，该文件覆盖掉tomcat中已经完成修改的文件。
+
+解决方案：
+
+  将Eclipse中自己维护的server.xml和content.xml文件替换为最新的文件；
+
+http://blog.csdn.net/Mint6/article/details/77800119?locationNum=7&fps=1 【推荐】

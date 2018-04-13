@@ -1,0 +1,8 @@
+************************ AES加密 *******************************
+http://blog.51cto.com/lavasoft/807502 
+https://www.cnblogs.com/bakari/p/3562244.html  配置文件操作
+
+https://www.cnblogs.com/yshyee/p/7050330.html 加密工具
+
+********************* MD5加密 数值摘要************************************
+http://blog.csdn.net/jjwwmlp456/article/details/21029159  

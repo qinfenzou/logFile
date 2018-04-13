@@ -1,0 +1,22 @@
+https://blog.csdn.net/dr_lf/article/details/41380303
+
+在使用mybatis进行批量插入时，发现对于使用oracle的自动增长序列时提示 ：　
+
+ORA-02287: 此处不允许序号　的错误，下面的这种使用可以解决问题：
+
+
+<!-- 批量插入 -->
+    <insert id="inserts" parameterType="java.util.List">
+       insert into PRESON
+        select SEQ_PRESON_ID.NEXTVAL,A.* from(
+        <foreach collection="list" item="item" index="index"
+            separator="UNION">
+            SELECT
+            #{item.presonName},
+            #{item.presonTel},
+            #{item.presonEmail},
+            #{item.presonAge}
+            from dual
+             </foreach>
+        ) A
+    </insert> 

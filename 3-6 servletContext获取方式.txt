@@ -1,0 +1,24 @@
+通常在spring项目中获取servletContext有以下方式
+1、request获取servletContext
+
+   ServletContext servletContext = request.getServletContext();
+
+
+2、使用ContextLoader
+
+   ServletContext servletContext = ContextLoader.getCurrentWebApplicationContext().getServletContext();
+
+3、使用spring注入自动注入
+   
+   @Autowired
+   private ServletContext servletContext;
+
+4，listener中获取ServletContext
+
+      //获取spring上下文！  
+        app = WebApplicationContextUtils.getWebApplicationContext(event.getServletContext()); 
+        //获取到bean了，你就可以任意搞它了，想怎么搞就怎么搞
+        app.getBean("UserService");   
+
+【注意】  在web.xml 配置中，该自定义的listener 要放置在contextLoaderListener之后，才可以；
+
