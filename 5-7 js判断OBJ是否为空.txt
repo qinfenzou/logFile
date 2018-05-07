@@ -1,0 +1,7 @@
+js 判断一个对象是否为空
+
+当obj="",obj=undefined,obj=null,obj=NaN 的时候 if（obj）为 false
+
+ 
+
+obj不为空的时候 if(obj) 为 true

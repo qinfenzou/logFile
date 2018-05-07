@@ -1,0 +1,39 @@
+在jsp页面使用标签过程中有时候不注意规则的话，eclipse会提示一些错误，下面针对这些错误提出相应的解决办法：
+
+<form></form>标签
+
+1. Invalid location of tag (form)
+
+  form 应该写到table外面去，并且form标签里面也不能套form标签。
+<style></style>
+2. Invalid location of tag (style)
+  style应该写在head里面。
+<script></script>
+3. Invalid location of tag (script)
+  script应该写到body，head里面。
+
+4.Attribute name(Name) uses wrong case character
+  虽说HTML不区分大小写，但是在eclipse里面，大写的话就报错，所以要改成小写吧。
+
+
+5.JSP文件中的html标签如下,在eclipse环境下提示：Invalid location of tag (div)。
+
+<a id="test1" class="mitem" href="#">
+           <img src="../m1.jpg" width="60"></img>
+            <div id="a-in-1" class="a-in"><div class="a-in-m"></div><div class="a-in-r"></div></div>
+</a>
+
+现象： 在 firefox3.6 下进入页面，或者进入页面有时界面显示乱套。但在 ie，firefox3.0下都显示正常。
+
+解决办法： 将<a></a>标签下的<div></div>标签替换为<span></span>，如下：
+
+<a id="test1" class="mitem" href="#">
+      <img src="../m1.jpg" width="60"></img>
+       <span id="a-in-1" class="a-in"><span class="a-in-m"></span><span class="a-in-r"></span></span>
+</a>
+
+原因应该是<a></a>与<div></div>标签的组合导致浏览器解析出错。
+
+6.Invalid location of tag (table)
+
+table应该写到textarea外面。

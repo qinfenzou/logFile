@@ -1,0 +1,54 @@
+jquery 插件开发提供了两种方法：
+ 
+
+   jQuery.extend();
+   jQuery.fn.extend();
+
+  虽然JScript没有类的概念，但是用类的概念来理解它，将会更加便利；
+
+  将jquery理解成一个类，而jQuery.extend();可以理解成添加静态方法，如：
+
+  $.extend({
+    
+    min: function(a,b) { ###### },
+
+    max:function(a,b)  { ###### }
+ 
+
+  })
+
+ 方法的调用为 $.max(1,2)
+
+ 此外 $.extend(target,object,[objectN]);具有扩展对象属性的作用；扩展属性将会返回至被扩展的对象中去
+
+ 如：
+   var target = {name: ‘hello’,age : 10};
+   var extendObj = {name: ‘hi’,height: 175};
+
+   $.extend(target,extendObj)；
+
+   ===》  target == {name: ‘hi’,age :10 , height: 175 }
+
+
+  jQuery.fn.extend(object);为jQuery添加成员函数，既为jQuery.prototype进行扩展；
+
+  $.fn.extend({    //添加多个 成员函数
+   
+       alertCilck： function（）{ 
+        
+             alert（$(this).val()）;
+}
+  
+ });
+ 
+  等同于：
+
+  $.fn.alertClick = function() {
+
+         alert($(this).val());        
+
+ }   
+
+
+ $("#input").alertClick();
+
